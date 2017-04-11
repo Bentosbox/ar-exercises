@@ -35,13 +35,13 @@ yaletown = Store.create(
 @mens_stores = Store.where(mens_apparel: true)
 
 @mens_stores.each do |revenueOutput|
-  puts "#{revenueOutput.name}'s revenue #{revenueOutput.annual_revenue}"
+  puts "#{revenueOutput.name}'s revenue is #{revenueOutput.annual_revenue}"
 end
 
 @womens_stores = Store.where(womens_apparel: true).where('annual_revenue < 1000000')
 
 @womens_stores.each do |revenueWomen|
-  puts "#{revenueWomen.name}'s' revenue #{revenueWomen.annual_revenue}"
+  puts "#{revenueWomen.name}'s' revenue is #{revenueWomen.annual_revenue}"
 end
 
 puts Store.count
